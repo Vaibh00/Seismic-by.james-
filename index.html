@@ -1,0 +1,242 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Seismic — Encrypted Base-layer Blockchain</title>
+  <meta name="description" content="Seismic: an encrypted, hardware-backed blockchain for privacy-first dApps. Created by James William." />
+  <style>
+    :root{
+      --bg:#f6fbff; /* soft sky */
+      --card:#ffffff;
+      --accent-sky:#7ec8f5; /* sky blue */
+      --accent-green:#9fe5b8; /* light green */
+      --accent-red:#ffb3b3; /* light red */
+      --silver:#cfcfcf; /* silver */
+      --muted:#5b6b76;
+      --glass: rgba(255,255,255,0.7);
+      --radius:14px;
+      --max-width:1100px;
+      --shadow: 0 6px 30px rgba(30,40,50,0.08);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#eaf6ff);color:#102027}
+    a{text-decoration:none;color:inherit}
+    .wrap{max-width:var(--max-width);margin:36px auto;padding:28px}header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent-sky),var(--accent-green));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;box-shadow:var(--shadow)}
+.brand h1{font-size:20px;margin:0}
+nav a{margin-left:16px;color:var(--muted);font-weight:600}
+
+.hero{display:grid;grid-template-columns:1.02fr 0.98fr;gap:22px;margin-top:22px}
+.card{background:var(--card);border-radius:var(--radius);padding:22px;box-shadow:var(--shadow);border:1px solid rgba(15,23,42,0.03)}
+
+.summary li{margin:8px 0;padding-left:10px}
+.summary li::marker{color:var(--accent-sky)}
+
+.banner-image{width:100%;height:220px;border-radius:10px;object-fit:cover;border:1px solid var(--silver)}
+.small-grid{display:flex;gap:12px;margin-top:12px}
+.small-grid img{width:100%;height:100px;object-fit:cover;border-radius:10px;border:1px solid rgba(0,0,0,0.06)}
+
+.features{display:flex;flex-direction:column;gap:10px}
+.feature{display:flex;gap:12px;align-items:flex-start}
+.pill{display:inline-block;padding:8px;border-radius:999px;font-weight:700}
+
+.quiz{margin-top:12px}
+.q{padding:12px;border-radius:10px;border:1px solid rgba(15,23,42,0.03);margin-bottom:8px}
+.options{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.opt{padding:8px;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.7),rgba(250,250,250,0.7));cursor:pointer}
+.opt:hover{transform:translateY(-2px);transition:all .12s}
+
+.show-answers{margin-top:8px;display:inline-flex;gap:8px;align-items:center}
+button.primary{background:linear-gradient(90deg,var(--accent-sky),var(--accent-green));border:none;padding:10px 14px;border-radius:10px;color:white;font-weight:700;cursor:pointer}
+button.ghost{background:transparent;border:1px solid var(--silver);padding:10px 12px;border-radius:10px;cursor:pointer}
+
+footer{margin-top:28px;padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.8),rgba(255,255,255,0.65));display:flex;justify-content:space-between;align-items:center;border:1px solid rgba(15,23,42,0.03)}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;}
+  header{flex-direction:column;align-items:flex-start}
+}
+
+/* subtle decorative shapes */
+.decor{position:fixed;right:-80px;top:10%;width:420px;height:420px;background:radial-gradient(circle at 10% 10%,var(--accent-sky),transparent 40%),radial-gradient(circle at 90% 80%,var(--accent-green),transparent 30%);opacity:0.25;border-radius:50%;filter:blur(48px);pointer-events:none}
+
+  </style>
+</head>
+<body>
+  <div class="decor" aria-hidden></div>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">S</div>
+        <div>
+          <h1>Seismic</h1>
+          <div style="font-size:12px;color:var(--muted)">Encrypted base-layer blockchain</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#docs">Docs</a>
+      </nav>
+    </header><main class="hero">
+  <section class="card">
+    <img class="banner-image" src="https://www.seismic.systems/" alt="Seismic banner image (homepage)" onerror="this.style.display='none'"/>
+    <h2 style="margin-top:14px">Seismic — privacy-first blockchain with base-layer encryption</h2>
+    <p style="color:var(--muted)">A quick 10-line summary and a short interactive quiz. Created by <strong>James William</strong> — X: <em>@Gmsniper6</em> • Discord: <em>@jackcm_wsw3</em></p>
+
+    <div style="display:flex;gap:12px;margin-top:10px;align-items:center">
+      <span class="pill" style="background:var(--accent-sky);color:#06304a">Sky Blue</span>
+      <span class="pill" style="background:var(--accent-green);color:#063004">Light Green</span>
+      <span class="pill" style="background:var(--accent-red);color:#580000">Light Red</span>
+      <span class="pill" style="background:linear-gradient(90deg,var(--silver),#ffffff);color:#1b2b33;border:1px solid rgba(0,0,0,0.03)">Silver</span>
+    </div>
+
+    <h3 id="features" style="margin-top:16px">10-line Summary</h3>
+    <ol class="summary">
+      <li>Seismic is a blockchain with encryption built into the base layer, not just wallets.</li>
+      <li>Uses secure hardware to protect data end-to-end.</li>
+      <li>Memory is split into Transparent and Encrypted regions.</li>
+      <li>Keeps data private during all state transitions.</li>
+      <li>Supports DeFi, payments, and real-world asset apps.</li>
+      <li>Code is fully open source (e.g., seismic-revm, seismic-client).</li>
+      <li>A developer testnet is already running.</li>
+      <li>Aims to be the go-to chain for privacy-focused dApps.</li>
+      <li>Strengths: privacy, hardware security, open ecosystem.</li>
+      <li>Challenges: complexity, adoption, scalability trade-offs.</li>
+    </ol>
+
+    <div class="small-grid" style="margin-top:12px">
+      <img src="https://www.seismic.systems/blog/introducing-seismic" alt="Introducing Seismic"/>
+      <img src="https://docs.seismic.systems/" alt="Seismic Docs"/>
+      <img src="https://www.seismic.systems/blog/seismic-secures-7m-led-by-a16z-crypto-to-build-the-encrypted-blockchain" alt="Funding announcement"/>
+    </div>
+
+  </section>
+
+  <aside class="card">
+    <h3 style="margin-top:0">Quick facts</h3>
+    <div class="features">
+      <div class="feature"><div style="width:12px;height:12px;border-radius:3px;background:var(--accent-sky)"></div><div><strong style="display:block">Privacy-first</strong><small style="color:var(--muted)">Encrypted state & hardware-backed keys</small></div></div>
+      <div class="feature"><div style="width:12px;height:12px;border-radius:3px;background:var(--accent-green)"></div><div><strong style="display:block">Open source</strong><small style="color:var(--muted)">seismic-revm, seismic-client</small></div></div>
+      <div class="feature"><div style="width:12px;height:12px;border-radius:3px;background:var(--accent-red)"></div><div><strong style="display:block">Dev testnet</strong><small style="color:var(--muted)">Public developer network running</small></div></div>
+    </div>
+
+    <div class="quiz" id="quiz">
+      <h3>Quick quiz</h3>
+
+      <div class="q" data-answer="B">
+        <strong>1) What sets Seismic apart from most blockchains?</strong>
+        <div class="options">
+          <div class="opt">A) Faster block time</div>
+          <div class="opt">B) Built-in base-layer encryption</div>
+          <div class="opt">C) Larger token supply</div>
+          <div class="opt">D) Cheaper gas</div>
+        </div>
+      </div>
+
+      <div class="q" data-answer="B">
+        <strong>2) Which memory regions does Seismic define?</strong>
+        <div class="options">
+          <div class="opt">A) Public & Private</div>
+          <div class="opt">B) Transparent & Encrypted</div>
+          <div class="opt">C) Hot & Cold</div>
+          <div class="opt">D) Read & Write</div>
+        </div>
+      </div>
+
+      <div class="q" data-answer="C">
+        <strong>3) Seismic’s code is:</strong>
+        <div class="options">
+          <div class="opt">A) Closed source</div>
+          <div class="opt">B) Licensed only to banks</div>
+          <div class="opt">C) Completely open source</div>
+          <div class="opt">D) Pay-to-use</div>
+        </div>
+      </div>
+
+      <div class="q" data-answer="B">
+        <strong>4) Which applications are a key focus for Seismic?</strong>
+        <div class="options">
+          <div class="opt">A) Social media only</div>
+          <div class="opt">B) DeFi and encrypted dApps</div>
+          <div class="opt">C) Gaming consoles</div>
+          <div class="opt">D) File storage only</div>
+        </div>
+      </div>
+
+      <div class="q" data-answer="C">
+        <strong>5) Current development status?</strong>
+        <div class="options">
+          <div class="opt">A) No network yet</div>
+          <div class="opt">B) Only on paper</div>
+          <div class="opt">C) Developer testnet live</div>
+          <div class="opt">D) Fully launched mainnet</div>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;align-items:center">
+        <button class="primary" id="showAnswers">Show Answers</button>
+        <button class="ghost" id="reset">Reset</button>
+      </div>
+
+      <div id="answerBox" style="margin-top:8px;color:var(--muted);font-weight:700"></div>
+
+    </div>
+
+    <hr style="margin:12px 0;border:none;border-top:1px dashed rgba(15,23,42,0.04)"/>
+    <div style="font-size:13px;color:var(--muted)"><strong>Developer resources</strong>
+      <ul style="margin:8px 0 0 18px;padding:0;color:var(--muted)">
+        <li>seismic-revm • seismic-client (open source)</li>
+        <li>Docs & Seismic Book linked on the homepage</li>
+        <li>Images included from the official site for quick reference</li>
+      </ul>
+    </div>
+  </aside>
+</main>
+
+<footer>
+  <div>
+    <div style="font-weight:700">Seismic</div>
+    <div style="font-size:13px;color:var(--muted)">Created by James William — X: @Gmsniper6 • Discord: @jackcm_wsw3</div>
+  </div>
+  <div style="text-align:right;">
+    <div style="font-size:13px;color:var(--muted)">Open source • Ready for GitHub Pages</div>
+    <div style="margin-top:6px"><a href="#" onclick="copyRepoInstructions();return false;" style="font-weight:700;color:var(--muted)">Copy deploy steps</a></div>
+  </div>
+</footer>
+
+  </div>  <script>
+    // Quiz logic
+    document.getElementById('showAnswers').addEventListener('click', function(){
+      const qs = Array.from(document.querySelectorAll('.q'));
+      let answers = [];
+      qs.forEach((q,i)=>{
+        const ans = q.getAttribute('data-answer') || '?';
+        answers.push((i+1)+') '+ans);
+        // highlight correct option
+        const opts = q.querySelectorAll('.opt');
+        opts.forEach(opt=>{
+          if(opt.textContent.trim().startsWith(ans+'))') || opt.textContent.trim().includes(') '+ans)){
+            /* nothing */
+          }
+        });
+      });
+      // mapping to text answers from the provided set
+      const mapping = {'1':'B','2':'B','3':'C','4':'B','5':'C'};
+      document.getElementById('answerBox').textContent = 'Answers — 1) B  2) B  3) C  4) B  5) C';
+    });
+    document.getElementById('reset').addEventListener('click', function(){
+      document.getElementById('answerBox').textContent = '';
+    });
+
+    function copyRepoInstructions(){
+      const txt = 'Save this file as index.html and push to a new GitHub repo. Enable GitHub Pages (main branch) or use any static host. Add a LICENSE (MIT) and README. Images link to https://www.seismic.systems/';
+      navigator.clipboard?.writeText(txt).then(()=>alert('Deploy steps copied to clipboard'))
+    }
+  </script></body>
+</html>
